@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(38, 43, 47);
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-size: x-large;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(38, 2, 69);
+}
+
+header img {
+    width: 90px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.headerLeftDiv {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 13%;
+}
+
+.headerRightDiv {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+}
+
+#videoTitleDiv {
+    height: 40vh;
+}
+
+.titleDiv {
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+h1,
+h2 {
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: 3px 3px 2px black;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clubName {
+    font-weight: bold;
+    color: bisque;
+}
