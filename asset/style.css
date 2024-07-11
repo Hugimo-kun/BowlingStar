@@ -4,6 +4,7 @@ body {
     font-family: "Roboto Slab", serif;
     font-size: x-large;
     margin: 0;
+    width: 100%;
 }
 
 header {
@@ -21,7 +22,7 @@ header a {
     text-decoration: none;
 }
 
-.headerLeftDiv {
+#headerLeftDiv {
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -29,7 +30,7 @@ header a {
     width: 13%;
 }
 
-.headerRightDiv {
+#headerRightDiv {
     padding: 15px;
     display: flex;
     justify-content: space-around;
@@ -41,7 +42,7 @@ header a {
     height: 40vh;
 }
 
-.titleDiv {
+#titleDiv {
     backdrop-filter: blur(5px);
     display: flex;
     flex-direction: column;
@@ -56,13 +57,111 @@ h2 {
     text-shadow: 3px 3px 2px black;
 }
 
-.presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h3 {
+    text-align: center;
 }
 
 .clubName {
     font-weight: bold;
     color: bisque;
+}
+
+#presentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#presentation .quilles {
+    width: 20%;
+    object-fit: cover;
+    height: 80vh;
+}
+
+#presentation #containerDescriptionMedia #description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+#presentation #containerDescriptionMedia #description h4 {
+    margin-top: -20px;
+}
+
+#presentation #containerDescriptionMedia #description p {
+    margin-top: -2px;
+}
+
+.FFBSQ {
+    margin-bottom: 30px;
+    font-size: medium;
+}
+
+#presentation #containerDescriptionMedia #socialMedia {
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#presentation #containerDescriptionMedia #socialMedia h4 {
+    margin-top: -1px;
+}
+
+#presentation #containerDescriptionMedia #socialMedia #allSocialMedia {
+    display: flex;
+    justify-content: space-around;
+}
+
+#presentation #containerDescriptionMedia #socialMedia #allSocialMedia div {
+    display: flex;
+    flex-direction: column;
+}
+
+#presentation #containerDescriptionMedia #socialMedia #allSocialMedia div a {
+    color: white;
+    text-decoration: none;
+}
+
+#presentation #containerDescriptionMedia #socialMedia img {
+    width: 100px;
+}
+
+#galleryPics {
+    display: flex;
+}
+
+#galleryPics img {
+    width: calc(100%/4);
+    object-fit: cover;
+}
+
+#maps {
+    text-align: center;
+}
+
+#maps #containerMapsTraject {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#maps #containerMapsTraject #iframeContainer {
+    width: 100%;
+}
+
+#maps #containerMapsTraject #trajects {
+    width: 75%;
+}
+
+#calendarSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calendarSection #calendar {
+    width: 90%;
 }

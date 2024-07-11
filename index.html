@@ -11,21 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- CSS Jarallax -->
     <link
       href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- TODO Changer le format de l'image -->
     <header>
-      <div class="headerLeftDiv">
+      <div id="headerLeftDiv">
         <a href="index.html"
           ><img src="asset/img/bowlingStar.png" alt="Logo BowlingStar"
         /></a>
         <a href="index.html" class="clubName">BowlingStar</a>
       </div>
-      <div class="headerRightDiv">
+      <div id="headerRightDiv">
         <a href="">Page 1</a>
         <a href="">Page 2</a>
         <a href="">Page 3</a>
@@ -33,68 +36,219 @@
       </div>
     </header>
 
-    <section class="main">
+    <section id="main">
       <div
         class="jarallax"
         data-jarallax
         data-video-src="mp4:./asset/video/bowling-background.mp4"
         id="videoTitleDiv"
       >
-        <div class="titleDiv">
+        <div id="titleDiv">
           <h1 class="clubName">BowlingStar</h1>
           <h2>Plus qu'un sport, une passion</h2>
         </div>
       </div>
-      <div class="presentation">
-        <h3>Le club pour les fans de bowling</h3>
+      <section id="presentation">
+        <img src="./asset/img/quilles.webp" alt="3 quilles" class="quilles" />
+        <div id="containerDescriptionMedia">
+          <div id="description">
+            <h3 class="clubName">BowlingStar</h3>
+            <h4>Le club pour les fans de bowling</h4>
+            <p id="FFBSQ">
+              Fédération Française de Bowling et de Sport de Quilles
+            </p>
+            <p>
+              Vous aussi vous adorez le bowling mais vous ne connaisez personne
+              avec qui aller ?
+            </p>
+            <p>
+              Ne vous inquitez-pas voici
+              <span class="clubName">BowlingStar</span>, le club de bowling le
+              plus passioné de Lyon.
+            </p>
+            <p>
+              Dans notre club il y a une soirée bowling tout les vendredi soir
+              avec apéro.
+            </p>
+            <p>Et chaque samedi après-midi il y a un petit tournoi.</p>
+            <p>On se retrouve au BowlingStar dans Lyon 1.</p>
+          </div>
+          <div id="socialMedia" data-aos="fade-up">
+            <h4>Rejoignez-nous sur les réseaux sociaux</h4>
+            <div id="allSocialMedia">
+              <!-- TODO Changer les imgs par des svg -->
+              <div>
+                <a href="https://facebook.com"
+                  ><img src="./asset/img/facebook-logo.svg" alt="Logo Facebook"
+                /></a>
+                <a href="https://facebook.com">Facebook</a>
+              </div>
+              <div>
+                <a href="https://instagram.com"
+                  ><img
+                    src="./asset/img/instagram-logo.svg"
+                    alt="Logo Instagram"
+                /></a>
+                <a href="https://instagram.com">Instagram</a>
+              </div>
+              <div>
+                <a href="https://x.com"
+                  ><img src="./asset/img/x-logo.svg" alt="Logo X"
+                /></a>
+                <a href="https://x.com">X</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./asset/img/quilles.webp" alt="3 quilles" class="quilles" />
+      </section>
+      <section id="galleryPics" data-aos="zoom-in">
+        <img
+          data-aos="fade-right"
+          src="./asset/img/boules-de-bowling.webp"
+          alt="Des boules de bowling"
+        />
+        <img
+          data-aos="fade-up"
+          src="./asset/img/2-personnes-qui-jouent-au-bowling.webp"
+          alt="Un homme aide une fille à jouer au bowling"
+        />
+        <img
+          data-aos="fade-up"
+          src="./asset/img/personne-qui-se-cache-le-visage-avec-une-boule-de-bowling.webp"
+          alt="Une personne qui se cache le visage derriere une boule de bowling"
+        />
+        <img
+          data-aos="fade-left"
+          src="./asset/img/piste-bowling.webp"
+          alt="Une piste de bowling"
+        />
+      </section>
+
+      <section id="maps">
+        <h3>Où sommes-nous ?</h3>
+        <h4>73 Rue Bellecombe, 69006 Lyon</h4>
+        <div id="containerMapsTraject">
+          <div id="iframeContainer" data-aos="flip-right">
+            <iframe
+              width="100%"
+              height="100%"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=73%20Rue%20Bellecombe,%2069006%20Lyon+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ><a href="https://www.gps.ie/">gps devices</a></iframe
+            >
+          </div>
+          <div id="trajects" data-aos="flip-left">
+            <h4>Comment venir ?</h4>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M15.764 4a3 3 0 0 1 2.683 1.658l1.386 2.771q.366-.15.72-.324a1 1 0 0 1 .894 1.79a32 32 0 0 1-.725.312l.961 1.923A3 3 0 0 1 22 13.473V16a3 3 0 0 1-1 2.236V19.5a1.5 1.5 0 0 1-3 0V19H6v.5a1.5 1.5 0 0 1-3 0v-1.264c-.614-.55-1-1.348-1-2.236v-2.528a3 3 0 0 1 .317-1.341l.953-1.908q-.362-.152-.715-.327a1.01 1.01 0 0 1-.45-1.343a1 1 0 0 1 1.342-.448q.355.175.72.324l1.386-2.77A3 3 0 0 1 8.236 4zM7.5 13a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3m9 0a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3m-.736-7H8.236a1 1 0 0 0-.832.445l-.062.108l-1.27 2.538C7.62 9.555 9.706 10 12 10c2.142 0 4.101-.388 5.61-.817l.317-.092l-1.269-2.538a1 1 0 0 0-.77-.545L15.765 6Z"
+                  />
+                </g>
+              </svg>
+              <p>
+                Il y a plusieurs parking à proximité tel que le parking à 10 Bd
+                Jules Favre, 69006 Lyon, le parking LPA&CO à 49 Bd des
+                Brotteaux, 69006 Lyon, ou encore le BePark à 31 Rue Maurice
+                Flandin, 69001 Lyon et il y en a plus encore.
+              </p>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="currentColor"
+                  d="M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24M160 72c0-4.42 3.58-8 8-8h176c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H168c-4.42 0-8-3.58-8-8zm-48 328c-17.67 0-32-14.33-32-32s14.33-32 32-32s32 14.33 32 32s-14.33 32-32 32m128-112H128c-17.67 0-32-14.33-32-32v-96c0-17.67 14.33-32 32-32h112zm32 0V128h112c17.67 0 32 14.33 32 32v96c0 17.67-14.33 32-32 32zm128 112c-17.67 0-32-14.33-32-32s14.33-32 32-32s32 14.33 32 32s-14.33 32-32 32"
+                />
+              </svg>
+              <p>
+                Il y a plusieurs bus qui s'arretent pas très loin tel que le 27,
+                C16, 70, C1, C2, C6, 70 et le BRT1.
+              </p>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  color="currentColor"
+                >
+                  <path
+                    d="m6 19l-2 2m14-2l2 2M9 15h.009m5.982 0H15M5 9c4 4 10.5 4 14 0"
+                  />
+                  <path
+                    d="M5.273 7.894C6.094 3.716 7.23 3 11.455 3h1.09c4.225 0 5.36.716 6.182 4.894l.553 2.816c.755 3.84 1.132 5.76.032 7.025S16.142 19 12 19c-4.141 0-6.212 0-7.312-1.265s-.723-3.185.032-7.025z"
+                  />
+                </g>
+              </svg>
+              <p>
+                Il y a aussi le tram T1 et T4 qui s'arrête aux arrets Collège
+                Bellcombe et Thiers-Laffayete ainsi que le métro B qui s'arretes
+                à Brotteaux.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="calendarSection">
+        <h3>Calendrier des évenements</h3>
         <p>
-          Vous aussi vous adorez le bowling mais vous ne connaisez personne avec
-          qui aller ?
+          Voici le calendrier des évenements qui se passent dans le club
+          <span class="clubName">BowlingStar</span>
         </p>
-        <p>
-          Ne vous inquitez-pas voici <span class="clubName">BowlingStar</span>,
-          le club de bowling le plus passioné de Lyon
-        </p>
-      </div>
-      <!-- <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p>
-      <p>a</p> -->
+        <div id="calendar"></div>
+      </section>
     </section>
 
     <script src="script.js"></script>
+
+    <!-- Script AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
 
+    <!-- Script Jarallax -->
     <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+
+    <!-- Script fullCalendar -->
+    <script src="index.global.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.getElementById("calendar");
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          height: 700,
+          firstDay: 1,
+        });
+        calendar.render();
+      });
+    </script>
   </body>
 </html>
