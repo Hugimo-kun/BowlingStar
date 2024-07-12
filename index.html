@@ -216,6 +216,7 @@
           </div>
         </div>
       </section>
+
       <section id="calendarSection">
         <h3>Calendrier des évenements</h3>
         <p>
@@ -223,6 +224,97 @@
           <span class="clubName">BowlingStar</span>
         </p>
         <div id="calendar"></div>
+      </section>
+      <section id="scoreSection">
+        <div id="container">
+          <h3>Calcul de score</h3>
+          <div id="scoreDescription">
+            <p>
+              Vous ne connaissez pas très bien comment fonctionne les points au
+              bowling ?<br />
+              Ne vous inquitez-pas, voici un calculateur de score, pour faire
+              simple, il vous suffit de mettre le nombre de quilles tombées au
+              1er lancer et le nombre de quilles tombées au 2ème lancer ainsi
+              qu'au 3ème si vous êtes à la 10ème manche et que vous avez fait
+              soit un strike soit un spare au 2ème lancer.
+            </p>
+            <p>
+              <span id="spare">Spare</span> : 10 points + double des points
+              obtenus au prochain lancer.
+            </p>
+            <p>
+              <span id="strike">Strike</span> : 10 points + double des points
+              obtenus aux 2 prochains lancer.
+            </p>
+          </div>
+          <div id="calculScoreDiv">
+            <div id="inputAddScore">
+              <div>
+                <label for="round10Label" id="round10Label">Manche 10 ?</label>
+                <input type="checkbox" name="round10Check" id="round10Check" />
+              </div>
+              <div id="firstLaunchDiv">
+                <label for="firstLaunch">1er Lancer</label>
+                <select name="firstLaunch" id="firstLaunchList">
+                  <option value="">
+                    --Veuillez choisir un nombre de quille--
+                  </option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10 - Strike</option>
+                </select>
+              </div>
+              <div id="secondLaunchDiv">
+                <label for="secondLaunch">2ème Lancer</label>
+                <select name="secondLaunch" id="secondLaunchList" disabled>
+                  <option value="">
+                    --Veuillez choisir un nombre de quille--
+                  </option>
+                </select>
+              </div>
+              <div id="thirdLaunchDiv">
+                <label for="thirdLaunch">3ème Lancer (manche 10)</label>
+                <select name="thirdLaunch" id="thirdLaunchList" disabled>
+                  <option value="">
+                    --Veuillez choisir un nombre de quille--
+                  </option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10 - Strike</option>
+                </select>
+              </div>
+              <button id="submit" disabled>Valider</button>
+            </div>
+            <div id="showScore">
+              <h4>Les scores</h4>
+              <div id="displayScore">
+                <div class="caseShowScore">
+                  <div id="scoreGiven">
+                    <p id="scoreFirstLaunch">0</p>
+                    <p id="scoreSecondLaunch">0</p>
+                  </div>
+                  <p id="score">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
 
@@ -244,8 +336,9 @@
       document.addEventListener("DOMContentLoaded", function () {
         const calendarEl = document.getElementById("calendar");
         const calendar = new FullCalendar.Calendar(calendarEl, {
-          height: 700,
+          height: 750,
           firstDay: 1,
+          events: EVENTS,
         });
         calendar.render();
       });

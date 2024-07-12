@@ -20002,3 +20002,77 @@ var FullCalendar = (function (exports) {
 
   return exports;
 })({});
+
+// Fonctions pour ajouter des events au calendrier
+
+function getNextFriday(date) {
+  const NEXT_FRIDAY = new Date(date);
+  const DAY_OF_WEEK = NEXT_FRIDAY.getDay();
+  const DAYS_UNTIL_FRIDAY = (5 + 7 - DAY_OF_WEEK) % 7;
+  NEXT_FRIDAY.setDate(NEXT_FRIDAY.getDate() + DAYS_UNTIL_FRIDAY);
+  return NEXT_FRIDAY;
+}
+
+function formatDate(date) {
+  const YEAR = date.getFullYear();
+  const MONTH = String(date.getMonth() + 1).padStart(2, "0");
+  const DAY = String(date.getDate()).padStart(2, "0");
+  return `${YEAR}-${MONTH}-${DAY}`;
+}
+
+function createNextFridays(startDate, count) {
+  const DATE = new Date(startDate);
+
+  const EVENTS = [];
+  let nextFriday = getNextFriday(DATE);
+
+  for (let i = 0; i < count; i++) {
+    EVENTS.push({
+      id: i + 1,
+      title: TITLE_BOWLING_DINNER,
+      start: `${formatDate(nextFriday)}T18:00:00`,
+      end: `${formatDate(nextFriday)}T21:00:00`,
+    });
+    nextFriday.setDate(nextFriday.getDate() + 7);
+  }
+
+  return EVENTS;
+}
+
+function getNextSaturday(date) {
+  const NEXT_SATURDAY = new Date(date);
+  const DAY_OF_WEEK = NEXT_SATURDAY.getDate(date);
+  const DAYS_UNTIL_SATURDAY = (6 + 7 - DAY_OF_WEEK) % 7;
+  NEXT_SATURDAY.setDate(NEXT_SATURDAY.getDate() + DAYS_UNTIL_SATURDAY);
+  return NEXT_SATURDAY;
+}
+
+function createNextSaturdays(startDate, count) {
+  const DATE = new Date(startDate);
+
+  let nextSaturday = getNextSaturday(DATE);
+
+  for (let i = 0; i < count; i++) {
+    EVENTS.push({
+      id: i + EVENTS.length + 1,
+      title: TITLE_BOWLING_COMPETITION,
+      start: `${formatDate(nextSaturday)}T13:00:00`,
+      end: `${formatDate(nextSaturday)}T16:00:00`,
+      color: "#ffff00",
+    });
+    nextSaturday.setDate(nextSaturday.getDate() + 7);
+  }
+
+  return EVENTS;
+}
+
+// Création des events
+
+const TITLE_BOWLING_DINNER = "Bowling apéro";
+const TITLE_BOWLING_COMPETITION = "Tournoi";
+
+const NUMBER_BOWLING_DINNER = 20;
+const NUMBER_BOWLING_COMPETITION = 10;
+
+EVENTS = createNextFridays("2024-07-12", NUMBER_BOWLING_DINNER);
+EVENTS = createNextSaturdays("2024-07-13", NUMBER_BOWLING_COMPETITION);
