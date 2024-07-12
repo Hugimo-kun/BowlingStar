@@ -20,6 +20,7 @@ header img {
 header a {
     color: white;
     text-decoration: none;
+    padding-right: 10px;
 }
 
 #headerLeftDiv {
@@ -35,7 +36,6 @@ header a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 20%;
 }
 
 #videoTitleDiv {

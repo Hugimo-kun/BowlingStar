@@ -291,6 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   SUBMIT_BUTTON.addEventListener("click", function () {
     countSubmit();
+    console.log(count);
     calcScore();
     displayScore();
   });
